@@ -7,7 +7,7 @@
 
 body {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(anime_art_of_calm_mental_healt.jpeg);
+    background-image: url(anime_art_of_calm_mental_healt.jpeg);
     background-position: center;
     background-size: cover;
 }
