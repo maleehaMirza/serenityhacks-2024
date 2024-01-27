@@ -9,7 +9,7 @@
 
 body {
     position: relative;
-    background-image: url(anime_art_of_calm_mental_healt.jpeg);
+    background: rgb(214, 219, 122);
     background-position: center;
     background-size: cover;
 }
@@ -19,7 +19,7 @@ body {
     width: 320px;
     height: 695px;
     margin: 4% auto;
-    background: rgb(214, 219, 122);
+    background-image: url(anime_art_of_calm_mental_healt.jpeg);
     border-radius: 40px;
     position: relative;
 
@@ -63,7 +63,7 @@ form input {
 
 form button {
     width: 110px;
-    height: 35px;
+    height: 50px;
     margin: 0 10px;
     background: linear-gradient(to right, #59d76a, #5fd683);
     border-radius: 30px;
