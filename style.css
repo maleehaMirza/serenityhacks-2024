@@ -6,18 +6,22 @@
 }
 
 body {
+    position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(anime_art_of_calm_mental_healt.jpeg);
     background-position: center;
     background-size: cover;
 }
 
 .container {
+
     width: 320px;
-    height: 700px;
+    height: 690px;
     margin: 4% auto;
     background: rgb(214, 219, 122);
     border-radius: 5px;
     position: relative;
+
+    /* Set the height of the container */
 
 }
 
@@ -68,15 +72,17 @@ form button {
 }
 
 .iphone {
-    margin: auto;
+    margin-top: -100px;
+    /* Adjust this value to move it up */
     border: 10px solid black;
     border-radius: 40px;
     width: 320px;
-    height: 700px;
+    height: 500px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 20px 15px #33333335;
-    
+    z-index: -1;
+    /* Set z-index to -1 to position it behind the form */
 }
