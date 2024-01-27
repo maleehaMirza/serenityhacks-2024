@@ -5,6 +5,8 @@
 
 }
 
+
+
 body {
     position: relative;
     background-image: url(anime_art_of_calm_mental_healt.jpeg);
@@ -15,10 +17,10 @@ body {
 .container {
 
     width: 320px;
-    height: 690px;
+    height: 695px;
     margin: 4% auto;
     background: rgb(214, 219, 122);
-    border-radius: 5px;
+    border-radius: 40px;
     position: relative;
 
     /* Set the height of the container */
@@ -77,9 +79,9 @@ form button {
     border: 10px solid black;
     border-radius: 40px;
     width: 320px;
-    height: 500px;
+    height: 700px;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 20px 15px #33333335;
