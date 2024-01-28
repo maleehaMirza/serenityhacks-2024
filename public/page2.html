@@ -14,7 +14,7 @@
         <div class="chat-messages" id="chat-messages"></div>
         <div class="user-input">
             <input type="text" id="user-input" placeholder="Enter an emotion...">
-            <button onclick="sendMessage()">GenerateTasks</button>
+            <button onclick="sendMessage()">Generate Tasks</button>
         </div>
 
     </div>
@@ -24,5 +24,27 @@
     <script src="config.js"></script>
     <script src="script.js"></script>
 </body>
+
+<script>
+    const api_url = "https://api.quotable.io/random"
+    const quote = document.getElementById("quote");
+    const author = document.getElementById("author");
+
+
+    async function getQuote(url) {
+        const response = await fetch(url);
+        var data = await response.json();
+        console.log(data);
+        quote.innerHTML = data.content;
+        author.innerHTML = data.author;
+    }
+
+
+    getQuote(api_url);
+</script>
+<audio controls loop autoplay>
+    <source src="calm-chill-beautiful-141317.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
 
 </html>

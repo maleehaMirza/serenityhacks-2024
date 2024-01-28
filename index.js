@@ -1,7 +1,7 @@
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-    apiKey: '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' // This is also the default, can be omitted
+    apiKey: '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' // This is also the default, can be omitted
 });
 
 const runPrompt = async () => {
