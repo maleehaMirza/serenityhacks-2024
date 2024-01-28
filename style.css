@@ -5,8 +5,6 @@
 
 }
 
-
-
 body {
     position: relative;
     background: rgb(214, 219, 122);
@@ -14,12 +12,26 @@ body {
     background-size: cover;
 }
 
+.iphone {
+    margin-top: -105px;
+    /* Adjust this value to move it up */
+    border: 10px solid black;
+    border-radius: 40px;
+    width: 320px;
+    height: 700px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 20px 15px #33333335;
+}
+
 .container {
 
     width: 320px;
-    height: 695px;
+    height: 710px;
     margin: 4% auto;
-    background-image: url(anime_art_of_calm_mental_healt.jpeg);
+    background-image: url(anime_art_of_cute_village_natu_5.jpeg);
     border-radius: 40px;
     position: relative;
 
@@ -36,35 +48,24 @@ h3 {
 .container form {
     width: 280px;
     position: absolute;
-    top: 100px;
-    left: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-
-form input {
-    width: 100%;
-    padding: 10px 5px;
-    margin: 5px 0;
-    border: 0;
-    border-bottom: 1px solid #999;
-    outline: none;
-    background: transparent;
-}
-
-::placeholder {
-    color: #777;
-}
 
 .btn-box {
     width: 100%;
     margin: 30px auto;
     text-align: center;
+    position: absolute;
+    top: 10px;
 }
 
 form button {
     width: 110px;
     height: 50px;
-    margin: 0 10px;
+    margin: 0 50px;
     background: linear-gradient(to right, #59d76a, #5fd683);
     border-radius: 30px;
     border: 0;
@@ -73,44 +74,28 @@ form button {
     cursor: pointer;
 }
 
-.iphone {
-    margin-top: -100px;
-    /* Adjust this value to move it up */
-    border: 10px solid black;
-    border-radius: 40px;
-    width: 320px;
-    height: 700px;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 20px 15px #33333335;
-    z-index: -1;
-    /* Set z-index to -1 to position it behind the form */
-}
+
 
 h1 {
-    position: relative;
-    top: 10px;
+    position: absolute;
+    top: 50%;
     /* Adjust this value to change the vertical position */
     width: 300px;
     height: 50px;
-    left: 20px;
-
+    left: 70%;
+    transform: translate(-50%, -50%);
     color: white;
     font: 700 normal 2em 'tahoma';
     text-shadow: 5px 2px #5fa05d, 2px 4px #222324, 3px 5px #222324;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     overflow: hidden;
-    border-right: .15em solid transparent;
+    border-right: .05em solid transparent;
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: .04em;
     animation: typing 2s steps(30),
         blink-caret .4s step-end 3;
 }
-
-
 
 /* The typing effect */
 @keyframes typing {

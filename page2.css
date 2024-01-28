@@ -9,9 +9,23 @@
 
 body {
     position: relative;
-    background-image: url(anime_art_of_calm_mental_healt.jpeg);
+    background: rgb(214, 219, 122);
     background-position: center;
     background-size: cover;
+}
+
+.iphone {
+    margin-top: -105px;
+    /* Adjust this value to move it up */
+    border: 10px solid black;
+    border-radius: 40px;
+    width: 320px;
+    height: 700px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 20px 15px #33333335;
 }
 
 .container {
