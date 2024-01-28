@@ -10,6 +10,21 @@
 </head>
 
 <body>
+    <audio id="myAudio" controls>
+        <source src="calm-chill-beautiful-141317.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="quote-box">
+        <h2>Quote of the day</h2>
+        <blockquote id="quote">Loading...</blockquote>
+        <span id="author">Loading...</span>
+        <div>
+            <button onclick="getQuote(api_url)">New Quote</button>
+        </div>
+    </div>
+
+
     <div class="chat-container">
         <div class="chat-messages" id="chat-messages"></div>
         <div class="user-input">
@@ -23,6 +38,7 @@
     <div class="iphone"></div>
     <script src="config.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 <script>
@@ -41,10 +57,20 @@
 
 
     getQuote(api_url);
+
+    // Get the audio element
+    const audio = document.getElementById('myAudio');
+
+    // Add an event listener to play the audio when the user clicks on it
+    audio.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
 </script>
-<audio controls loop autoplay>
-    <source src="calm-chill-beautiful-141317.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
+
 
 </html>
