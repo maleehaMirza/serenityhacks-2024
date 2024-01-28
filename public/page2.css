@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+
+
+body {
+    position: relative;
+    background: rgb(214, 219, 122);
+    background-position: center;
+    background-size: cover;
+}
+
+.iphone {
+    margin-top: -80px;
+    /* Adjust this value to move it up */
+    border: 10px solid black;
+    border-radius: 40px;
+    width: 320px;
+    height: 700px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 20px 15px #33333335;
+}
+
+.container {
+    width: 320px;
+    height: 710px;
+    margin: 4% auto;
+    background-image: url(anime_art_of_cute_village_natu_5.jpeg);
+    border-radius: 40px;
+    position: relative;
+
+    /* Set the height of the container */
+
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #533e82;
+}
+
+.container form {
+    width: 280px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+}
+
+
+form input {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+::placeholder {
+    color: #777;
+}
+
+.btn-box {
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+form button {
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to right, #59d76a, #5fd683);
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.iphone {
+    margin-top: -80px;
+    /* Adjust this value to move it up */
+    border: 10px solid black;
+    border-radius: 40px;
+    width: 320px;
+    height: 700px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 20px 15px #33333335;
+    z-index: -1;
+    /* Set z-index to -1 to position it behind the form */
+}
+
+.quote-box {
+    background: #fff;
+    width: 240px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+
+}
