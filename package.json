@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "config.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +19,11 @@
   },
   "homepage": "https://github.com/maleehaMirza/serenityhacks-2024#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.26.0",
+    "readline-sync": "^1.4.10"
   }
 }

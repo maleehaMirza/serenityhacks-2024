@@ -1,4 +1,8 @@
-// Add this code to the existing script.js file
+// Update the API endpoint to the local server
+const API_ENDPOINT = 'http://localhost:3000/api/chatgpt';
+
+const userInput = document.getElementById('user-input');
+const chatMessages = document.getElementById('chat-messages');
 
 function appendMessage(sender, message) {
     const messageElement = document.createElement("div");
@@ -6,21 +10,16 @@ function appendMessage(sender, message) {
     chatMessages.appendChild(messageElement);
 }
 
-function sendMessage() {
+async function sendMessage() {
     const userMessage = userInput.value.trim();
     if (userMessage === "") return;
 
     appendMessage("You", userMessage);
     userInput.value = "";
 
-    // Use apiKey in your code
-    // main.js
-    const config = require('../config');
+    const apiKey = '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';
 
-    const apiKey = config.apiKey;
-    const endpoint = 'https://api.openai.com/v1/engines/davinci/completions';
-
-    fetch(endpoint, {
+    const response = await fetch(API_ENDPOINT, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -30,11 +29,43 @@ function sendMessage() {
             prompt: userMessage,
             max_tokens: 100
         })
-    })
-        .then(response => response.json())
-        .then(data => {
-            const chatResponse = data.choices[0].text.trim();
-            appendMessage('ChatGPT', chatResponse);
-        })
-        .catch(error => console.error('Error:', error));
+    });
+
+    const data = await response.json();
+    const chatResponse = data.response.trim(); // The server now sends { response: chatResponse }
+    appendMessage('ChatGPT', chatResponse);
+}
+
+async function generateTasks() {
+    const emotion = userInput.value.trim();
+    if (emotion === "") return;
+
+    const tasks = await getTasksFromChatGPT(emotion);
+
+    // Display the generated tasks in the chat
+    tasks.forEach(task => appendMessage('ChatGPT', task));
+}
+
+async function getTasksFromChatGPT(emotion) {
+    try {
+        const response = await fetch(API_ENDPOINT, { // Use the same API endpoint for tasks
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+                prompt: `Generate 10 tasks for handling ${emotion}`,
+                max_tokens: 100
+            })
+        });
+
+        const data = await response.json();
+        const generatedTasks = data.response.map(choice => choice.trim()); // The server now sends { response: [...tasks] }
+
+        return generatedTasks;
+    } catch (error) {
+        console.error('Error:', error);
+        return [];
+    }
 }
