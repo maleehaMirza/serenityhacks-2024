@@ -22,20 +22,25 @@
         <div>
             <button onclick="getQuote(api_url)">New Quote</button>
         </div>
+
+
     </div>
 
-
-    <div class="chat-container">
-        <div class="chat-messages" id="chat-messages"></div>
-        <div class="user-input">
-            <input type="text" id="user-input" placeholder="Enter an emotion...">
-            <button onclick="sendMessage()">Generate Tasks</button>
-        </div>
-
-    </div>
 
     <div class="container"></div>
-    <div class="iphone"></div>
+    <div class="iphone">
+        <div class="btn-box">
+            <button type="button" onclick="nextStep()">Continue</button>
+        </div>
+    </div>
+
+    <script>
+        function nextStep() {
+            // Here you can add logic to handle the form submission and move to the next step
+            // For now, let's just alert a message
+            window.location.href = "page3.html";
+        }
+    </script>
     <script src="config.js"></script>
     <script src="script.js"></script>
 

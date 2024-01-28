@@ -88,67 +88,32 @@ form button {
     cursor: pointer;
 }
 
-.quote-box {
-    background: #aae2f1eb;
-    width: 240px;
+#chat-messages {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
+    top: 20px;
+    /* Adjust the bottom position to provide space for messages */
+    width: 280px;
+    overflow-y: auto;
+    /* Add vertical scrollbar if needed */
+    max-height: 300px;
+    /* Set a max height for the chat messages container */
+}
+
+#chat-box {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 280px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: rgb(251, 65, 65);
+    /* Set background color for the chat box */
     border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
-    z-index: 2;
-
-}
-
-.quote-box blockquote {
-    font-size: 20px;
-    min-height: 110px;
-}
-
-.quote-box blockquote::before,
-.quote-box blockquote::after {
-    content: '"';
-}
-
-.quote-box span {
-    display: block;
-    margin-top: 10px;
-    float: right;
-    position: relative;
-}
-
-.quote-box span::before {
-    content: '';
-    width: 20px;
-    height: 2px;
-    background: rgb(23, 124, 229);
-    position: absolute;
-    top: 50%;
-    left: -30px;
-}
-
-.quote-box div {
-    width: 100%;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-.quote-box button {
-    background-color: #73e8b7eb;
-    color: #000000;
-    border-radius: 25px;
-    border: 1px solid rgb(17, 117, 94);
-    width: 150px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    cursor: pointer;
+    /* Add border-radius for rounded corners */
+    padding: 10px;
+    /* Add padding for spacing inside the box */
+    box-shadow: 0 10px 20px 0px rgba(127, 229, 166, 0.15);
+    /* Add a box shadow for depth */
 }
 
 audio {
